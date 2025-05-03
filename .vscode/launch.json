@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Authentication Server",
+            "request": "launch",
+            "mainClass": "edu.co.upb.blinkdrive.BlinkdriveAuthentication",
+            "projectName": "blinkdrive-authentication",
+            "cwd": "${workspaceFolder}",
+            "vmArgs": "-Djava.rmi.server.hostname=localhost -Djava.security.policy=security.policy"
+        },
+        {
+            "type": "java",
+            "name": "Launch Authentication Client Demo",
+            "request": "launch",
+            "mainClass": "edu.co.upb.blinkdrive.auth.client.AuthClientDemo",
+            "projectName": "blinkdrive-authentication",
+            "cwd": "${workspaceFolder}",
+            "vmArgs": "-Djava.security.policy=security.policy"
+        }
+    ]
+}
