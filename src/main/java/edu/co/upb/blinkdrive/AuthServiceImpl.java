@@ -1,5 +1,6 @@
 package edu.co.upb.blinkdrive;
 
+import java.io.Serial;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import java.security.Key;
@@ -27,6 +28,7 @@ import io.jsonwebtoken.security.SignatureException;
 
 public class AuthServiceImpl extends UnicastRemoteObject implements AuthService {
 
+    @Serial
     private static final long serialVersionUID = 1L;
     private final Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
     private static final long TOKEN_VALIDITY = 3600000; // 1 hour in milliseconds
